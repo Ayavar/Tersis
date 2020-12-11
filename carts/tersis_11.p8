@@ -434,7 +434,15 @@ function enecoll(obj1, obj2)
 				obj1.x+8>obj2.x and
 				obj2.y+16>obj1.y and
 				obj1.y+8>obj2.y+8)then
-			
+			if(player.flp)then
+			 player.dx=2
+			 player.dy=-2
+			else
+				player.dx=-2
+				player.dy=-2
+			end
+			sfx(5)
+					return true
 	else
 		return false
 	end
