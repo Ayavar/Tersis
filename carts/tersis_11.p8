@@ -227,17 +227,21 @@ function add_ene(enex,eney,enespr)
 	end
 	
 	ene.mv = function(this)
-		if(player.y == this.y+8)then
-		
-			if(player.x < this.x-3)then
-				this.x=this.x-0.2
+		if(player.y <= this.y+8)then
+				this.y=this.y-0.8
 			end
 			
-			if(player.x > this.x+3)then
-				this.x=this.x+0.2
+			if(player.y >= this.y+8)then
+				this.y=this.y+0.8
 			end
 		
-		end
+			if(player.x <= this.x)then
+				this.x=this.x-0.8
+			end
+			
+			if(player.x >= this.x)then
+				this.x=this.x+0.8
+			end
  end
 	
 	add(enemies,ene)
